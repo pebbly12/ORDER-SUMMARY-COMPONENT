@@ -1,0 +1,197 @@
+:root {
+  --PALE-BLUE: hsl(225, 100%, 94%);
+  --BRIGHT-BLUE: hsl(245, 75%, 52%);
+  --VERY-PALE-BLUE: hsl(225, 100%, 98%);
+  --DESATURATED-BLUE: hsl(224, 23%, 55%);
+  --DARK-BLUE: hsl(223, 47%, 23%);
+  --WHITE: hsl(0, 0%, 100%);
+}
+
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Red Hat Display", serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--PALE-BLUE);
+  background-image: url(images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+}
+
+.card-container {
+  border-radius: 20px;
+  background-color: var(--WHITE);
+  width: 100%;
+  max-width: 380px;
+}
+
+.card-image .card-illustration {
+  width: 100%;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.card-header {
+  margin: 1.5em 0em 1.5em 0em;
+  text-align: center;
+}
+
+.card-title {
+  color: var(--DARK-BLUE);
+  font-weight: 900;
+  font-size: 1.7rem;
+}
+
+.card-description {
+  color: var(--DESATURATED-BLUE);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.7;
+  padding: 1em 3.5em 0em 3.5em;
+}
+
+.plan-details {
+  border-radius: 12px;
+  margin: 1.5em 1.5em;
+  padding: 1.3em 1em;
+  background-color: var(--VERY-PALE-BLUE);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plan-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.plan-price-info {
+  margin-left: 1.5em;
+}
+
+.plan-title {
+  color: var(--DARK-BLUE);
+  font-weight: 900;
+  font-size: 1.1rem;
+}
+
+.plan-price {
+  color: var(--DESATURATED-BLUE);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-top: 0.2em;
+}
+
+.change-plan {
+  text-decoration: underline;
+  color: var(--BRIGHT-BLUE);
+  font-weight: 900;
+}
+
+.card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin: 1.5em 1.5em;
+}
+
+.btn-primary {
+  background-color: var(--BRIGHT-BLUE);
+  color: var(--WHITE);
+  box-shadow: 0 12px 10px 0px hsla(245, 75%, 52%, 0.218);
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 800;
+  padding: 1em 2em;
+  border-radius: 12px;
+}
+
+.btn-primary:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.change-plan:hover {
+  cursor: pointer;
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+.btn-secondary {
+  color: var(--DESATURATED-BLUE);
+  background-color: var(--WHITE);
+  padding: 0.5em 0em 0.8em 0em;
+  font-weight: 800;
+  font-size: 1.1rem;
+  border: none;
+}
+
+.btn-secondary:hover {
+  cursor: pointer;
+  color: var(--DARK-BLUE);
+}
+
+/* MEDIA QUERY */
+@media (min-width: 765px) {
+  body {
+    background-image: url(images/pattern-background-desktop.svg);
+    background-size: contain;
+  }
+
+  .card-container {
+    width: 100%;
+    max-width: 470px;
+  }
+
+  .card-header {
+    margin-top: 2.5em;
+  }
+
+  .card-title {
+    font-size: 1.8rem;
+  }
+
+  .card-description {
+    padding: 0em 4em;
+    font-size: 1.1rem;
+    margin-top: 1em;
+    font-weight: 500;
+  }
+
+  .plan-details {
+    margin: 0em 2.9em;
+  }
+
+  .plan-info {
+    margin-left: 0.5em;
+  }
+
+  .plan-title,
+  .plan-price {
+    font-size: 1.1rem;
+  }
+
+  .change {
+    margin-right: 0.5em;
+    font-size: 1rem;
+  }
+
+  .card-actions {
+    margin: 2em 2.9em 2em 2.9em;
+  }
+
+  .btn {
+    font-size: 1em;
+    font-weight: 600;
+  }
+}
